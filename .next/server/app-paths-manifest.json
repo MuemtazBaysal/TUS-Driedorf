@@ -1,8 +1,0 @@
-{
-  "/shop/page": "app/shop/page.js",
-  "/football/page": "app/football/page.js",
-  "/page": "app/page.js",
-  "/donations/page": "app/donations/page.js",
-  "/football/teams/[teamSlug]/page": "app/football/teams/[teamSlug]/page.js",
-  "/club/[slug]/page": "app/club/[slug]/page.js"
-}
