@@ -4,7 +4,7 @@ import GlassCard from "@/components/GlassCard";
 import SponsorGrid from "@/components/SponsorGrid";
 import CTA from "@/components/CTA";
 import Form from "@/components/Form";
-import { siteContent } from "@/content/siteContent";
+import { siteContent, type CTAData } from "@/content/siteContent";
 
 export default function HomePage() {
   return (
@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={siteContent.events.sponsors.title} description={siteContent.events.sponsors.intro}>
+      <Section title={siteContent.home.sponsorsSection.title} description={siteContent.home.sponsorsSection.description}>
         <SponsorGrid sponsors={siteContent.sponsors} />
       </Section>
 
@@ -34,7 +34,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-semibold text-mist">{siteContent.home.cta.title}</h2>
             <p className="mt-3 text-sm text-slate-200/85 md:text-base">{siteContent.home.cta.description}</p>
           </div>
-          <CTA data={siteContent.home.cta.button} />
+          <CTA data={siteContent.home.cta.button as CTAData} />
         </GlassCard>
       </Section>
 

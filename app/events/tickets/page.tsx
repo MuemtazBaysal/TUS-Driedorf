@@ -1,11 +1,5 @@
-import SubpageLayout from "@/components/SubpageLayout";
-import CTA from "@/components/CTA";
-import { siteContent } from "@/content/siteContent";
+import { redirect } from "next/navigation";
 
-export default function EventTicketsPage() {
-  return (
-    <SubpageLayout title={siteContent.events.tickets.title} intro={siteContent.events.tickets.intro}>
-      <CTA data={siteContent.events.tickets.cta} />
-    </SubpageLayout>
-  );
+export default function LegacyEventsTicketsPage() {
+  redirect("/westerwaldkirmes/tickets");
 }
