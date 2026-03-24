@@ -8,10 +8,10 @@ type FooterProps = {
 
 export default function Footer({ content }: FooterProps) {
   return (
-    <footer className="mt-24 border-t border-white/10 px-6 pb-10 pt-12 md:px-10">
+    <footer className="mt-24 border-t border-white/10 px-4 pb-10 pt-12 md:px-8">
       <div className="glass mx-auto grid w-full max-w-6xl gap-8 rounded-3xl p-8 md:grid-cols-4">
         <div>
-          <Logo size={48} className="mb-3 text-glow" />
+          <Logo size={72} className="mb-4 text-glow" />
           <p className="text-xl font-semibold text-mist">{content.slogan}</p>
         </div>
 

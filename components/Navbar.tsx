@@ -18,18 +18,18 @@ export default function Navbar({ siteName, items, openLabel, closeLabel }: Navba
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 px-4 py-4 md:px-8">
-      <nav className="glass mx-auto flex w-full max-w-6xl items-center justify-between rounded-full px-5 py-3">
+      <nav className="glass mx-auto flex w-full max-w-7xl items-center justify-between rounded-full px-5 py-3 lg:px-7">
         <Link href="/" className="flex items-center gap-3">
-          <Logo size={36} className="text-glow" />
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-mist md:text-base">
+          <Logo size={52} className="text-glow" />
+          <span className="whitespace-nowrap text-base font-semibold uppercase tracking-[0.2em] text-mist md:text-lg">
             {siteName}
           </span>
         </Link>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           {items.map((item) => (
             <div key={item.href} className="group relative">
-              <Link href={item.href} className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm text-slate-100/90 transition hover:bg-white/10">
+              <Link href={item.href} className="inline-flex items-center gap-1 whitespace-nowrap rounded-full px-4 py-2 text-base text-slate-100/90 transition hover:bg-white/10">
                 <span>{item.label}</span>
                 {item.children?.length ? <ChevronDown size={14} /> : null}
               </Link>
@@ -53,7 +53,7 @@ export default function Navbar({ siteName, items, openLabel, closeLabel }: Navba
         <button
           type="button"
           aria-label={menuOpen ? closeLabel : openLabel}
-          className="inline-flex rounded-full p-2 text-mist transition hover:bg-white/10 md:hidden"
+          className="inline-flex rounded-full p-2 text-mist transition hover:bg-white/10 lg:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -61,7 +61,7 @@ export default function Navbar({ siteName, items, openLabel, closeLabel }: Navba
       </nav>
 
       {menuOpen ? (
-        <div className="glass mx-auto mt-3 w-full max-w-6xl rounded-3xl p-4 md:hidden">
+        <div className="glass mx-auto mt-3 w-full max-w-6xl rounded-3xl p-4 lg:hidden">
           <div className="space-y-2">
             {items.map((item) => (
               <div key={item.href} className="rounded-2xl border border-white/10 p-3">

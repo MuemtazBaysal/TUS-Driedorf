@@ -46,3 +46,44 @@ a {
 .text-balance {
   text-wrap: balance;
 }
+
+.football-bg-layer {
+  opacity: 0.1;
+}
+
+.football-bg-item {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+  will-change: transform;
+}
+
+@keyframes footballDriftA {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate3d(10px, -18px, 0) rotate(8deg) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes footballDriftB {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate3d(-12px, 16px, 0) rotate(-7deg) scale(1.04);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.football-drift-a {
+  animation: footballDriftA 20s ease-in-out infinite;
+}
+
+.football-drift-b {
+  animation: footballDriftB 22s ease-in-out infinite;
+}

@@ -15,7 +15,7 @@ export default function Hero({ data }: HeroProps) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
-    <section className="relative mx-auto grid min-h-[80vh] w-full max-w-6xl items-end px-6 pb-16 pt-36 md:px-10">
+    <section className="relative mx-auto grid min-h-[80vh] w-full max-w-6xl items-end px-4 pb-16 pt-36 md:px-8">
       <motion.div style={{ y, scale }} className="pointer-events-none absolute inset-0 -z-20 overflow-hidden rounded-[2.5rem]">
         <Image src={data.image} alt={data.title} fill priority className="object-cover opacity-45" sizes="100vw" />
       </motion.div>
