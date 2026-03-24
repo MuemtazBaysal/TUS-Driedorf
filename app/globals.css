@@ -16,15 +16,19 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background: #070b16;
-  color: #eff4ff;
+  background: #0a1f0a;
+  color: #ffffff;
 }
 
 body {
-  background-image: radial-gradient(circle at 8% 0%, rgba(74, 107, 202, 0.35), transparent 42%),
-    radial-gradient(circle at 92% 8%, rgba(42, 183, 197, 0.3), transparent 38%),
-    linear-gradient(170deg, #04070e 10%, #070b16 42%, #0d1730 100%);
+  background-image: url('/grass-texture.jpg'),
+    radial-gradient(circle at 8% 0%, rgba(74, 222, 128, 0.2), transparent 42%),
+    radial-gradient(circle at 92% 8%, rgba(168, 213, 163, 0.15), transparent 38%),
+    linear-gradient(170deg, #051205 10%, #0a1f0a 42%, #0d2a0d 100%);
+  background-size: cover, 100% 100%, 100% 100%, 100% 100%;
+  background-position: center, 0 0, 0 0, 0 0;
   background-attachment: fixed;
+  background-blend-mode: overlay, normal, normal, normal;
 }
 
 a {
@@ -33,10 +37,10 @@ a {
 }
 
 .glass {
-  border: 1px solid rgba(223, 231, 255, 0.18);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(168, 213, 163, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(14px);
-  box-shadow: 0 16px 40px -18px rgba(40, 99, 198, 0.45);
+  box-shadow: 0 16px 40px -18px rgba(74, 222, 128, 0.25);
 }
 
 .text-balance {

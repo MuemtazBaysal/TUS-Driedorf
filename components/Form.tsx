@@ -39,7 +39,7 @@ export default function Form({ title, description, fields, submitLabel, note, id
             )}
           </label>
         ))}
-        <button type="button" className="rounded-full bg-glow px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-mist">
+        <button type="button" className="rounded-full bg-glow px-6 py-3 text-sm font-semibold text-shell shadow-lg shadow-glow/20 transition hover:bg-glow/90">
           {submitLabel}
         </button>
         <p className="text-xs text-slate-300/80">{note}</p>

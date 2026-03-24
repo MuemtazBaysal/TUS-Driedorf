@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import Logo from "@/components/icons/Logo";
 import type { NavItem } from "@/content/siteContent";
 
 type NavbarProps = {
@@ -18,8 +19,11 @@ export default function Navbar({ siteName, items, openLabel, closeLabel }: Navba
   return (
     <header className="fixed left-0 right-0 top-0 z-50 px-4 py-4 md:px-8">
       <nav className="glass mx-auto flex w-full max-w-6xl items-center justify-between rounded-full px-5 py-3">
-        <Link href="/" className="text-sm font-semibold uppercase tracking-[0.2em] text-mist md:text-base">
-          {siteName}
+        <Link href="/" className="flex items-center gap-3">
+          <Logo size={36} className="text-glow" />
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-mist md:text-base">
+            {siteName}
+          </span>
         </Link>
 
         <div className="hidden items-center gap-2 md:flex">
