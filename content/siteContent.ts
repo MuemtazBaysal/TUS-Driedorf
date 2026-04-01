@@ -218,7 +218,11 @@ export const siteContent = {
       href: "/fussball",
       children: [
         { label: "Schiedsrichter", href: "/fussball/schiedsrichter" },
-        ...teamSeed.map((team) => ({ label: team.title, href: `/fussball/${team.slug}` })),
+        {
+          label: "Manschafften",
+          href: "/fussball",
+          children: teamSeed.map((team) => ({ label: team.title, href: `/fussball/${team.slug}` })),
+        },
         { label: "Westerwald Indoor Cup", href: "/fussball/westerwald-indoor-cup" },
         { label: "Westerwald Jugend Indoor Cup", href: "/fussball/westerwald-jugend-indoor-cup" },
         { label: "Hallenzeiten", href: "/fussball/hallenzeiten" },
@@ -547,3 +551,4 @@ export const siteContent = {
 };
 
 export type SiteContent = typeof siteContent;
+
