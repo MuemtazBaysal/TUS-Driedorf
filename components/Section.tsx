@@ -19,8 +19,8 @@ export default function Section({ title, description, children, className = "" }
       transition={{ duration: 0.7, ease: "easeOut" }}
       className={`mx-auto w-full max-w-6xl px-4 py-14 md:px-8 ${className}`}
     >
-      {title ? <h2 className="text-balance text-3xl font-semibold tracking-tight text-mist md:text-4xl">{title}</h2> : null}
-      {description ? <p className="mt-4 max-w-3xl text-base text-slate-200/85 md:text-lg">{description}</p> : null}
+      {title ? <h2 className="text-balance text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">{title}</h2> : null}
+      {description ? <p className="mt-4 max-w-3xl text-base text-gray-600 md:text-lg">{description}</p> : null}
       {children ? <div className="mt-8">{children}</div> : null}
     </motion.section>
   );

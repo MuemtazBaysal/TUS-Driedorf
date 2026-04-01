@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FootballBackground from "@/components/FootballBackground";
 import { siteContent } from "@/content/siteContent";
 
 export const metadata: Metadata = {
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body className="bg-shell text-white">
-        <FootballBackground />
+      <body className="bg-white text-gray-900">
         <Navbar
           siteName={siteContent.meta.siteName}
           items={siteContent.navigation}

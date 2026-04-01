@@ -7,7 +7,7 @@ type CTAProps = {
 };
 
 export default function CTA({ data }: CTAProps) {
-  const variant = data.variant === "secondary" ? "bg-white/8 text-mist hover:bg-white/16 border border-calm/30" : "bg-glow text-shell hover:bg-glow/90 shadow-lg shadow-glow/20";
+  const variant = data.variant === "secondary" ? "bg-white text-gray-900 hover:bg-gray-50 border-2 border-green-600" : "bg-green-600 text-white hover:bg-green-700 shadow-lg";
 
   return (
     <Link

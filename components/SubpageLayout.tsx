@@ -11,8 +11,8 @@ export default function SubpageLayout({ title, intro, children }: SubpageLayoutP
   return (
     <main className="mx-auto w-full max-w-6xl px-4 pb-20 pt-32 md:px-8">
       <GlassCard className="p-8 md:p-12">
-        <h1 className="text-balance text-4xl font-semibold text-mist md:text-5xl">{title}</h1>
-        <p className="mt-5 max-w-3xl text-base text-slate-200/85 md:text-lg">{intro}</p>
+        <h1 className="text-balance text-4xl font-semibold text-gray-900 md:text-5xl">{title}</h1>
+        <p className="mt-5 max-w-3xl text-base text-gray-600 md:text-lg">{intro}</p>
       </GlassCard>
       <div className="mt-8">{children}</div>
     </main>

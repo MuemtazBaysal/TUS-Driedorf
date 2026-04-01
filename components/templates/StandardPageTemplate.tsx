@@ -12,7 +12,7 @@ export default function StandardPageTemplate({ page }: StandardPageTemplateProps
     <SubpageLayout title={page.title} intro={page.intro}>
       <div className="space-y-4">
         {page.body.map((paragraph) => (
-          <GlassCard key={`${page.slug}-${paragraph.slice(0, 20)}`} className="p-6 text-sm text-slate-200/85 md:text-base">
+          <GlassCard key={`${page.slug}-${paragraph.slice(0, 20)}`} className="p-6 text-sm text-gray-600 md:text-base">
             {paragraph}
           </GlassCard>
         ))}

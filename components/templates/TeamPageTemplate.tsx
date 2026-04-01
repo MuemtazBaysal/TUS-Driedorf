@@ -18,27 +18,27 @@ type TeamPageTemplateProps = {
 export default function TeamPageTemplate({ page, labels }: TeamPageTemplateProps) {
   return (
     <SubpageLayout title={page.title} intro={page.intro}>
-      <p className="mb-5 text-xs uppercase tracking-[0.24em] text-calm">{page.eyebrow}</p>
+      <p className="mb-5 text-xs uppercase tracking-[0.24em] text-green-700">{page.eyebrow}</p>
 
-      <h2 className="mb-4 text-2xl font-semibold text-mist">{labels.trainingTimes}</h2>
+      <h2 className="mb-4 text-2xl font-semibold text-gray-900">{labels.trainingTimes}</h2>
       <Schedule items={page.trainingTimes} />
 
-      <h2 className="mb-4 mt-8 text-2xl font-semibold text-mist">{labels.contacts}</h2>
+      <h2 className="mb-4 mt-8 text-2xl font-semibold text-gray-900">{labels.contacts}</h2>
       <div className="grid gap-5 md:grid-cols-2">
         {page.contacts.map((contact) => (
           <GlassCard key={`${page.slug}-${contact.email}`} className="p-6">
-            <p className="text-lg font-semibold text-mist">{contact.name}</p>
-            <p className="mt-1 text-sm text-calm">{contact.role}</p>
-            <p className="mt-3 text-sm text-slate-200/85">{contact.email}</p>
-            <p className="mt-1 text-sm text-slate-200/85">{contact.phone}</p>
+            <p className="text-lg font-semibold text-gray-900">{contact.name}</p>
+            <p className="mt-1 text-sm text-green-700">{contact.role}</p>
+            <p className="mt-3 text-sm text-gray-600">{contact.email}</p>
+            <p className="mt-1 text-sm text-gray-600">{contact.phone}</p>
           </GlassCard>
         ))}
       </div>
 
-      <h2 className="mb-4 mt-8 text-2xl font-semibold text-mist">{labels.results}</h2>
-      <GlassCard className="p-6 text-sm text-slate-200/85">{page.resultsPlaceholder}</GlassCard>
+      <h2 className="mb-4 mt-8 text-2xl font-semibold text-gray-900">{labels.results}</h2>
+      <GlassCard className="p-6 text-sm text-gray-600">{page.resultsPlaceholder}</GlassCard>
 
-      <h2 className="mb-4 mt-8 text-2xl font-semibold text-mist">{labels.gallery}</h2>
+      <h2 className="mb-4 mt-8 text-2xl font-semibold text-gray-900">{labels.gallery}</h2>
       <div className="grid gap-5 md:grid-cols-2">
         {page.gallery.map((image, index) => (
           <GlassCard key={`${page.slug}-${image}`} className="p-2">
@@ -51,8 +51,8 @@ export default function TeamPageTemplate({ page, labels }: TeamPageTemplateProps
 
       <GlassCard className="mt-8 flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-2xl font-semibold text-mist">{page.cta.title}</p>
-          <p className="mt-2 text-sm text-slate-200/85">{page.cta.description}</p>
+          <p className="text-2xl font-semibold text-gray-900">{page.cta.title}</p>
+          <p className="mt-2 text-sm text-gray-600">{page.cta.description}</p>
         </div>
         <CTA data={page.cta.button} />
       </GlassCard>

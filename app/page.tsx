@@ -17,8 +17,8 @@ export default function HomePage() {
         <div className="grid gap-5 md:grid-cols-3">
           {siteContent.home.highlights.map((item) => (
             <GlassCard key={item.title} className="p-6">
-              <h3 className="text-xl font-semibold text-mist">{item.title}</h3>
-              <p className="mt-3 text-sm text-slate-200/85">{item.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+              <p className="mt-3 text-sm text-gray-600">{item.description}</p>
             </GlassCard>
           ))}
         </div>
@@ -31,8 +31,8 @@ export default function HomePage() {
       <Section>
         <GlassCard className="flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-semibold text-mist">{siteContent.home.cta.title}</h2>
-            <p className="mt-3 text-sm text-slate-200/85 md:text-base">{siteContent.home.cta.description}</p>
+            <h2 className="text-3xl font-semibold text-gray-900">{siteContent.home.cta.title}</h2>
+            <p className="mt-3 text-sm text-gray-600 md:text-base">{siteContent.home.cta.description}</p>
           </div>
           <CTA data={siteContent.home.cta.button as CTAData} />
         </GlassCard>
