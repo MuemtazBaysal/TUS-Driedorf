@@ -219,8 +219,8 @@ export const siteContent = {
       children: [
         { label: "Schiedsrichter", href: "/fussball/schiedsrichter" },
         {
-          label: "Manschafften",
-          href: "/fussball",
+          label: "Mannschaft",
+          href: "/fussball/mannschaften",
           children: teamSeed.map((team) => ({ label: team.title, href: `/fussball/${team.slug}` })),
         },
         { label: "Westerwald Indoor Cup", href: "/fussball/westerwald-indoor-cup" },

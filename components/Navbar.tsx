@@ -138,7 +138,13 @@ export default function Navbar({ siteName, items, openLabel, closeLabel }: Navba
                     {item.children.map((child) =>
                       child.children?.length ? (
                         <div key={child.label} className="py-1">
-                          <p className="text-sm font-semibold text-gray-900">{child.label}</p>
+                          <Link
+                            href={child.href}
+                            className="text-sm font-semibold text-gray-900"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
                           <div className="mt-1 space-y-1 pl-3">
                             {child.children.map((grandChild) => (
                               <Link
